@@ -13,7 +13,10 @@ a {
 	box-sizing: border-box;
 }
 a:hover {
-	color: #512BE7;
+	color: #020203;
+    cursor: pointer;
+    font-weight: bold;
+
 }
 .nav-container {
     margin-top: 30px;
@@ -35,10 +38,29 @@ a:hover {
     color: #9893A3;
     font-family:'Open Sans';
 }
-.menu_home{
-    font-weight: 700;
-    color: black;
-}
+.menuitem {
+    display: inline-block;
+    position: relative;
+    color: #0087ca;
+  }
+  .menuitem:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    border-radius: 10%;
+    background-color: #512BE7;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  .menuitem:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
 .btn1 {
 	display: inline-block;
 	border: 1px solid #6C63FF;
